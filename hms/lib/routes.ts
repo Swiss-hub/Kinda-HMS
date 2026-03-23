@@ -1,0 +1,69 @@
+type RouteAccessProps = {
+    [key: string]: string[];
+};
+
+export const routeAccess: RouteAccessProps = {
+    "/": ["admin", "patient", "doctor", "nurse", "lab_technician", "cashier", "sign-in"],
+    // "/admin": ["admin"],
+    "/admin/(.*)": ["admin"],
+    // "/patient": ["admin", "patient", "doctor", "nurse"],
+    "/patient/(.*)": ["admin", "patient", "doctor", "nurse"],
+    // "/doctor": ["admin", "doctor"],
+    "/doctor/(.*)": ["admin", "doctor"],
+    // "/staff": ["admin", "nurse", "lab_technician", "cashier"],
+    "/staff/(.*)": ["admin", "nurse", "lab_technician", "cashier"],
+    "/record/users": ["admin"],
+    "/record/doctors": ["admin"],
+    "/record/doctors/(.*)": ["admin", "doctor"],
+    "/record/staffs": ["admin", "doctor"],
+    "/record/patients": ["admin", "doctor", "nurse"],
+    "/patient/registrations": ["patient"],
+};
+
+// Commented out duplicate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { createRouteMatcher } from "@clerk/nextjs/server";
+
+// export const routeMatchers = {
+//     admin: createRouteMatcher([
+//         "/admin(.*)",
+//         "/patient(.*)",
+//         "/record/users",
+//         "/record/doctors(.*)",
+//         "/record/patients",
+//         "/record/doctors",
+//         "record/staffs",
+//         "/record/patients",
+//     ]),
+
+//     patient: createRouteMatcher([ "/patient(.*)", "/patient/registrations"]),
+
+//     doctor: createRouteMatcher([ 
+//         "/doctor(.*)", 
+//         "record/doctors(.*)",
+//         "record/patients",
+//         "/patient(.*)",
+//         "/record/staffs",
+//         "/record/patients",
+//     ]),
+
+// };
