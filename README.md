@@ -1,2 +1,2 @@
 # Kinda-HMS
-A Hospital Management System where patients, doctors, appointments,medical records and billing can be managed within a platform.
+A Hospital Management System where Patients, Doctors, Nurses, Appointments, Medical records and Billing can be managed within a platform.
